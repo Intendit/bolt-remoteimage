@@ -27,6 +27,12 @@ class Extension extends \Bolt\BaseExtension
         }
         
         $parsedURL = parse_url($args['url']);
+        $pathinfo = pathinfo($parsedURL['path']);
+        
+        if(!in_array($pathinfo['extension'], $this->app['config']->get('general/accept_file_types'))){
+            return "not an accepted file type";
+        }
+        
         $path = $this->app['paths']['filespath'] . '/remotecache/' . join(explode('/', $parsedURL['path']));
         $returnurl = 'remotecache/' . join(explode('/', $parsedURL['path']));
         

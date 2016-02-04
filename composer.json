@@ -20,9 +20,5 @@
         "psr-4": {
             "Bolt\\Extension\\sahassar\\remoteimage\\": ""
         }
-    },
-    "extra": {
-        "bolt-assets": "assets",
-        "bolt-icon": "assets/facebook-icon.png"
     }
 }

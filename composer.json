@@ -1,6 +1,6 @@
 {
     "name": "sahassar/remoteimage",
-    "description": "Extension to embed Facebook Like, Comments and Pages.",
+    "description": "Extension to pull images from remote sources.",
     "type": "bolt-extension",
     "keywords": [],
     "require": {

@@ -14,11 +14,11 @@
         }
     ],
     "autoload": {
-        "files": [
-            "init.php"
-        ],
         "psr-4": {
-            "Bolt\\Extension\\sahassar\\remoteimage\\": ""
+            "sahassar\\remoteimage\\": "src"
         }
+    },
+    "extra": {
+        "bolt-class": "sahassar\\remoteimage\\remoteimageExtension"
     }
 }

@@ -17,7 +17,7 @@ class remoteimageExtension extends SimpleExtension
     public function remoteImage(array $args = array())
     {
         $app = $this->getContainer();
-
+        $opts = [];
         $defaults = array(
             'url' => '',
         );
@@ -34,14 +34,14 @@ class remoteimageExtension extends SimpleExtension
 
         $fs = $app['filesystem']->getFilesystem('files');
 
-        if (!$fs->has('remoteimage')) {
+/*        if (!$fs->exists('remoteimage')) {*/
             $fs->createDir('remoteimage');
-        }
+        /*}*/
 
-        if (!$fs->has($returnurl)) {
+        /*if (!$fs->exists($returnurl)) {*/
             $image = $app['guzzle.client']->get($args['url'], $opts)->getBody(true);
             $fs->put($returnurl, $image);
-        }
+        /*}*/
         return $returnurl;
     }
 }
